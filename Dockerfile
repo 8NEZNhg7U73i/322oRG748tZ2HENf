@@ -12,4 +12,4 @@ RUN chmod +x /start.sh
 
 CMD /start.sh
 
-RUN tail -f /dev/null
+CMD tail -f /dev/null
