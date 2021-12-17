@@ -7,12 +7,12 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$AUUID/$AUUID/g" -e "s/\$MYUU
 wget -qO- $CONFIGXRAY | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$ParameterSSENCYPT/$ParameterSSENCYPT/g" >/xray.json
 
 # storefiles
-mkdir -p /usr/share/caddy/$AUUID && wget -O /usr/share/caddy/$AUUID/StoreFiles $StoreFiles
-wget -P /usr/share/caddy/$AUUID -i /usr/share/caddy/$AUUID/StoreFiles
+#mkdir -p /usr/share/caddy/$AUUID && wget -O /usr/share/caddy/$AUUID/StoreFiles $StoreFiles
+#wget -P /usr/share/caddy/$AUUID -i /usr/share/caddy/$AUUID/StoreFiles
 
-for file in $(ls /usr/share/caddy/$AUUID); do
-    [[ "$file" != "StoreFiles" ]] && echo \<a href=\""$file"\" download\>$file\<\/a\>\<br\> >>/usr/share/caddy/$AUUID/ClickToDownloadStoreFiles.html
-done
+#for file in $(ls /usr/share/caddy/$AUUID); do
+#    [[ "$file" != "StoreFiles" ]] && echo \<a href=\""$file"\" download\>$file\<\/a\>\<br\> >>/usr/share/caddy/$AUUID/ClickToDownloadStoreFiles.html
+#done
 
 # start
 tor &
