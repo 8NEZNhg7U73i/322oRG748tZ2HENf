@@ -15,11 +15,11 @@ services:
     volumes:
       - ./:/root
     environment:
-      - AUUID="4b1f8e62-57a7-4ac3-bd56-e3a40e139ac3"
-      - CADDYIndexPage="https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
-      - CONFIGCADDY="https://raw.githubusercontent.com/8NEZNhg7U73i/322oRG748tZ2HENf/main/etc/Caddyfile"
-      - CONFIGXRAY="https://raw.githubusercontent.com/8NEZNhg7U73i/322oRG748tZ2HENf/main/etc/xray.json"
-      - ParameterSSENCYPT="AES-256-GCM"
+      - AUUID=4b1f8e62-57a7-4ac3-bd56-e3a40e139ac3
+      - CADDYIndexPage=https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html
+      - CONFIGCADDY=https://raw.githubusercontent.com/8NEZNhg7U73i/322oRG748tZ2HENf/main/etc/Caddyfile
+      - CONFIGXRAY=https://raw.githubusercontent.com/8NEZNhg7U73i/322oRG748tZ2HENf/main/etc/xray.json
+      - ParameterSSENCYPT=AES-256-GCM
     ports:
       - "10800:1080/tcp"
       - "10800:1080/udp"
